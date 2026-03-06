@@ -462,7 +462,7 @@ TAstTask fun_decl(TWrappedTokenStream& stream) {
     auto next = stream.Next();
     TTypePtr returnType = std::make_shared<TVoidType>();
     std::vector<std::shared_ptr<TVarStmt>> args;
-    std::string name = "<main>";
+    std::string name = "main";
 
     if (next.Type == TToken::Keyword && IsTypeKeyword(static_cast<EKeyword>(next.Value.i64))) {
         // function return type
